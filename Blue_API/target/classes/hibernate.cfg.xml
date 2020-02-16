@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+      "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+      "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd" >
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.datasource">java:comp/env/jdbc/blue</property>
+    
+        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.format_sql">false</property>
+        
+        <mapping class="com.geicon.blue.api.models.Acao" />
+        <mapping class="com.geicon.blue.api.models.Agente" />
+        <mapping class="com.geicon.blue.api.models.BaseConhecimento" />
+        <mapping class="com.geicon.blue.api.models.Documento" />
+        <mapping class="com.geicon.blue.api.models.Elicitacao" />
+        <mapping class="com.geicon.blue.api.models.Instituicao" />
+        <mapping class="com.geicon.blue.api.models.Interesse" />
+        <mapping class="com.geicon.blue.api.models.Log" />
+        <mapping class="com.geicon.blue.api.models.Objeto" />
+        <mapping class="com.geicon.blue.api.models.ObjetoOcorrencia" />
+        <mapping class="com.geicon.blue.api.models.Pesquisa" />
+        <mapping class="com.geicon.blue.api.models.Relacao" />
+        <mapping class="com.geicon.blue.api.models.Responsabilidade" />
+        <mapping class="com.geicon.blue.api.models.Usuario" />
+        
+    </session-factory>
+</hibernate-configuration>

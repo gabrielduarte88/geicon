@@ -1,0 +1,785 @@
+* {
+  outline: none !important;
+  text-shadow: none !important;
+  resize: none;
+}
+*::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+}
+*::-webkit-scrollbar {
+  width: 6px!important;
+  height: 6px!important;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+a,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none !important;
+}
+button {
+  background-image: none !important;
+}
+div.modal {
+  width: 450px;
+  height: 150px;
+  margin: auto;
+  margin-top: 40px;
+  display: none;
+  overflow: hidden;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+div.modal.large {
+  width: 90%;
+}
+@media (max-width: 767px) {
+  div.modal {
+    width: 90%;
+  }
+}
+div.modal > span.close > .fa {
+  margin-right: 3px;
+}
+div.modal > div.modal-text {
+  font-size: 18px;
+  font-weight: 300;
+  padding: 20px;
+}
+div.modal > div.modal-text > .fa {
+  margin-right: 3px;
+}
+div.modal > div.modal-text > ul {
+  margin: 0;
+  padding: 5px 10px;
+  text-align: left;
+  font-size: 14px;
+}
+div.modal > div.modal-text > div.onbody h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 15px 0;
+}
+div.modal > div.modal-text > div.onbody > div {
+  float: left;
+  width: 100%;
+  margin-bottom: 15px;
+}
+div.modal > div.modal-text > div.onbody > div p {
+  text-align: left;
+  float: left;
+  width: 375px;
+  margin: -5px 0 0 0;
+  padding: 0;
+  padding-left: 10px;
+  vertical-align: top;
+}
+div.modal > div.modal-text > div.onbody > div button {
+  float: left;
+  border: none;
+  width: 35px;
+  height: 30px;
+  padding: 0;
+  text-align: center;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+div.modal > div.modal-text > div.onbody > div button.ct {
+  background-color: #27C874;
+}
+div.modal > div.modal-text > div.onbody > div button.pn {
+  background-color: #EF311C;
+}
+div.modal > div.modal-text > div.onbody > div button.nc {
+  background-color: #FFD800;
+}
+div.modal > div.modal-text > div.buttons {
+  margin: 10px 0;
+}
+div.modal > div.modal-text > div.buttons > button {
+  border: none;
+  font-size: 15px;
+  height: 30px;
+  padding: 0 14px;
+  font-weight: 400;
+  margin: 0 10px 5px 10px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+div.modal > div.modal-text > div.buttons > button.full {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.boxshadow-none {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.flexbox {
+  display: -webkit-flex;
+  display: flex;
+}
+.flexbox-column {
+  -webkit-flex-flow: column;
+  flex-flow: column;
+}
+.unselectable {
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.overflow-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.popover-content {
+  font-size: 13px;
+  line-height: 18px;
+}
+.borderfx:hover > hr {
+  width: 100%;
+}
+.borderfx > hr {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  width: 0;
+  margin: auto;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+div.modal {
+  background-color: #FFF;
+  -webkit-box-shadow: 0 3px 10px 1px rgba(60, 60, 60, 0.6);
+  -moz-box-shadow: 0 3px 10px 1px rgba(60, 60, 60, 0.6);
+  box-shadow: 0 3px 10px 1px rgba(60, 60, 60, 0.6);
+}
+div.modal > div.modal-text {
+  color: #666;
+}
+div.modal > div.modal-text > .fa.fa-warning {
+  color: #F00;
+}
+div.modal > div.modal-text > .fa.fa-thumbs-o-up {
+  color: #090;
+}
+button,
+button.btn {
+  background-color: #00B8FF;
+  color: #FFF;
+}
+button.btn-success,
+button.btn.btn-success {
+  background-color: #67b168;
+}
+button.btn-warning,
+button.btn.btn-warning {
+  background-color: #FFF600;
+  color: #333;
+}
+button.btn-info,
+button.btn.btn-info {
+  background-color: #99CCF2;
+}
+button.btn-danger,
+button.btn.btn-danger {
+  background-color: #fc5f5f;
+}
+button.btn-default,
+button.btn.btn-default {
+  background-color: #CFCFCF;
+  color: #333;
+}
+button:active,
+button.btn:active,
+button:visited,
+button.btn:visited {
+  background-color: #33c6ff;
+  color: #FFF;
+}
+button:active.btn-success,
+button.btn:active.btn-success,
+button:visited.btn-success,
+button.btn:visited.btn-success {
+  background-color: #89c289;
+}
+button:active.btn-warning,
+button.btn:active.btn-warning,
+button:visited.btn-warning,
+button.btn:visited.btn-warning {
+  background-color: #fff833;
+  color: #333;
+}
+button:active.btn-info,
+button.btn:active.btn-info,
+button:visited.btn-info,
+button.btn:visited.btn-info {
+  background-color: #c6e3f8;
+}
+button:active.btn-danger,
+button.btn:active.btn-danger,
+button:visited.btn-danger,
+button.btn:visited.btn-danger {
+  background-color: #fd9191;
+}
+button:active.btn-default,
+button.btn:active.btn-default,
+button:visited.btn-default,
+button.btn:visited.btn-default {
+  background-color: #e9e9e9;
+  color: #333;
+}
+button:hover,
+button.btn:hover,
+button:focus,
+button.btn:focus {
+  background-color: #0093cc;
+  color: #FFF;
+}
+button:hover.btn-success,
+button.btn:hover.btn-success,
+button:focus.btn-success,
+button.btn:focus.btn-success {
+  background-color: #4e974f;
+}
+button:hover.btn-warning,
+button.btn:hover.btn-warning,
+button:focus.btn-warning,
+button.btn:focus.btn-warning {
+  background-color: #ccc500;
+  color: #333;
+}
+button:hover.btn-info,
+button.btn:hover.btn-info,
+button:focus.btn-info,
+button.btn:focus.btn-info {
+  background-color: #6cb5ec;
+}
+button:hover.btn-danger,
+button.btn:hover.btn-danger,
+button:focus.btn-danger,
+button.btn:focus.btn-danger {
+  background-color: #fb2d2d;
+}
+button:hover.btn-default,
+button.btn:hover.btn-default,
+button:focus.btn-default,
+button.btn:focus.btn-default {
+  background-color: #b6b6b6;
+  color: #333;
+}
+body {
+  color: #333;
+  background-color: #FFF;
+}
+body.login {
+  color: #FFF;
+  background-color: #004A66;
+}
+body > div.loading {
+  background: url(../images/ring.svg) #F2F2F2 no-repeat center center;
+}
+body > div.container > a {
+  color: #FFF;
+  text-shadow: 0px 0px 10px #000000 !important;
+}
+body > div.container > a > hr {
+  border-top: 1px solid #FFF;
+}
+body > div.container > div.login-container > div.login {
+  background-color: #FFF;
+  border: 1px solid #FFF;
+  color: #FFF;
+  -webkit-box-shadow: 0 3px 10px 1px rgba(60, 60, 60, 0.6);
+  -moz-box-shadow: 0 3px 10px 1px rgba(60, 60, 60, 0.6);
+  box-shadow: 0 3px 10px 1px rgba(60, 60, 60, 0.6);
+}
+body > div.container > div.login-container > div.login > form > h2 {
+  background: url(../images/bg.png) #004a66 no-repeat center -160px;
+}
+body > div.container > div.login-container > div.login > form > div.form-group.focused > div.input-group > span.input-group-addon {
+  color: #00B8FF;
+}
+body > div.container > div.login-container > div.login > form > div.form-group.error > div.input-group > span.input-group-addon {
+  color: #F77;
+}
+body > div.container > div.login-container > div.login > form > div.form-group.error > div.input-group > span.input-group-addon > .fa {
+  color: #F77;
+}
+body > div.container > div.login-container > div.login > form > div.form-group.error > div.input-group > input.form-control {
+  color: #F77;
+}
+body > div.container > div.login-container > div.login > form > div.form-group > div.input-group {
+  background-color: transparent;
+}
+body > div.container > div.login-container > div.login > form > div.form-group > div.input-group > span.input-group-addon {
+  border-right: 1px solid #CCC;
+  background: transparent;
+  color: #004a66;
+}
+body > div.container > div.login-container > div.login > form > div.form-group > div.input-group > input.form-control {
+  border-bottom: 1px solid #CCC;
+  color: #666;
+  background-color: transparent;
+}
+body > div.container > div.login-container > div.login > form > div.form-group > div.input-group > input.form-control::-webkit-input-placeholder {
+  color: #999;
+}
+body > div.container > div.login-container > div.login > form > div.form-group > div.input-group > input.form-control:-moz-placeholder {
+  color: #999;
+}
+body > div.container > div.login-container > div.login > form > div.form-group > div.input-group > input.form-control::-moz-placeholder {
+  color: #999;
+}
+body > div.container > div.login-container > div.login > form > div.form-group > div.input-group > input.form-control:-ms-input-placeholder {
+  color: #999;
+}
+body > div.container > div.login-container > div.login > form > div.form-group > a {
+  color: #FFF;
+}
+body > div.container > div.login-container > div.login > form > a {
+  color: #004a66;
+}
+body > div.container > div.login-container > div.login > form > a > hr {
+  border-top: 1px solid #004a66;
+}
+body > div.topo {
+  border-bottom: 1px solid #999;
+  background-color: #004A66;
+  -webkit-box-shadow: 0 1px 10px 1px rgba(60, 60, 60, 0.3);
+  -moz-box-shadow: 0 1px 10px 1px rgba(60, 60, 60, 0.3);
+  box-shadow: 0 1px 10px 1px rgba(60, 60, 60, 0.3);
+}
+body > div.topo > h2 > a {
+  color: #FFF;
+}
+body > div.topo > h2 > hr {
+  border-top: 1px solid #FFF;
+}
+body > div.topo > button.btnMenu {
+  background: none !important;
+  color: #FFF;
+}
+body > div.topo > div.meusdados {
+  color: #FFF;
+}
+body > div.topo > div.meusdados > a {
+  color: #FFF;
+}
+body > div.topo > div.meusdados > ul {
+  background-color: #FEFEFE;
+  border: 1px solid #999;
+  -webkit-box-shadow: 0 3px 10px 1px rgba(60, 60, 60, 0.3);
+  -moz-box-shadow: 0 3px 10px 1px rgba(60, 60, 60, 0.3);
+  box-shadow: 0 3px 10px 1px rgba(60, 60, 60, 0.3);
+}
+body > div.topo > div.meusdados > ul > li {
+  color: #004a66;
+}
+body > div.topo > div.meusdados > ul > li.sep {
+  border-top: 1px solid #999;
+}
+body > div.topo > div.meusdados > ul > li > a {
+  color: #004a66;
+}
+body > div.topo > div.meusdados > ul > li > a:hover {
+  color: #00B8FF;
+}
+body > div.topo > hr {
+  border-top: 3px solid #FFF;
+  border-color: #b3eaff;
+}
+body > div.principal {
+  background-color: #FFF;
+}
+body > div.principal > div.menu {
+  background-color: #F0F0F0;
+  -webkit-box-shadow: 0 1px 10px 1px rgba(60, 60, 60, 0.3);
+  -moz-box-shadow: 0 1px 10px 1px rgba(60, 60, 60, 0.3);
+  box-shadow: 0 1px 10px 1px rgba(60, 60, 60, 0.3);
+}
+body > div.principal > div.menu > div.menu-container > ul > li {
+  border-bottom: 1px solid #CCC;
+}
+body > div.principal > div.menu > div.menu-container > ul > li > a {
+  color: #333;
+  background-color: #F2F2F2;
+}
+body > div.principal > div.menu > div.menu-container > ul > li > a:hover {
+  background-color: #0f6584;
+  color: #FFF;
+}
+body > div.principal > div.centro {
+  background-color: #FFF;
+}
+body > div.principal > div.centro > div.centro-container {
+  /* ELICITACAO */
+  /* FIM - ELICITACAO */
+}
+body > div.principal > div.centro > div.centro-container > h1 {
+  color: #666;
+}
+body > div.principal > div.centro > div.centro-container > p {
+  color: #333;
+}
+body > div.principal > div.centro > div.centro-container > p > a {
+  color: #333;
+}
+body > div.principal > div.centro > div.centro-container > p > a:hover {
+  color: #00B8FF;
+}
+body > div.principal > div.centro > div.centro-container > hr {
+  border-color: #CCC;
+}
+body > div.principal > div.centro > div.centro-container > div.box {
+  color: #333;
+}
+body > div.principal > div.centro > div.centro-container > div.box > p {
+  color: #333;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > label {
+  color: #333;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group.focused > label {
+  color: #00B8FF;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group.error > label {
+  color: #fc5f5f;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group.error > select {
+  color: #fc5f5f;
+  border: 1px solid #fc5f5f;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group.error > input.form-control {
+  color: #fc5f5f;
+  border-bottom: 1px solid #fc5f5f;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group.error > textarea.form-control {
+  color: #fc5f5f;
+  border-color: #fc5f5f;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group > label {
+  color: #999;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group > label > button {
+  background: none;
+  border: none;
+  color: #333;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group > select {
+  color: #333;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group > select[disabled] {
+  border-color: #CCC;
+  color: #CCC;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group > input.form-control-static {
+  color: #333;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group > textarea.form-control {
+  background-color: #FCFCFC;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group > input.form-control {
+  border-bottom: 1px solid #CCC;
+  color: #000;
+  background-color: transparent;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group > input.form-control::-webkit-input-placeholder {
+  color: #999;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group > input.form-control:-moz-placeholder {
+  color: #999;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group > input.form-control::-moz-placeholder {
+  color: #999;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group > input.form-control:-ms-input-placeholder {
+  color: #999;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group > input.form-control:focus {
+  border-bottom: 1px solid #00B8FF;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group > p.help-block {
+  color: #999;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > div.acoes > div.filtro {
+  color: #333;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > div.acoes > div.filtro > input[type=text],
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > div.acoes > div.filtro > select {
+  border: 1px solid #CCC;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > div.acoes > div.filtro > input[type=text]::-webkit-input-placeholder,
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > div.acoes > div.filtro > select::-webkit-input-placeholder {
+  color: #999;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > div.acoes > div.filtro > input[type=text]:-moz-placeholder,
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > div.acoes > div.filtro > select:-moz-placeholder {
+  color: #999;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > div.acoes > div.filtro > input[type=text]::-moz-placeholder,
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > div.acoes > div.filtro > select::-moz-placeholder {
+  color: #999;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > div.acoes > div.filtro > input[type=text]:-ms-input-placeholder,
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > div.acoes > div.filtro > select:-ms-input-placeholder {
+  color: #999;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > div.acoes > div.filtro > input[type=text]:focus,
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > div.acoes > div.filtro > select:focus {
+  border: 1px solid #00B8FF;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table {
+  border-bottom: 1px solid #CCC;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table > thead > tr > th {
+  background-color: #0f6584;
+  color: #FFF;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table > thead > tr > th > a.ordem {
+  color: #FFF;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table > tbody > tr {
+  background-color: #FFF;
+  color: #333;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table > tbody > tr:nth-child(even) {
+  background-color: #F6F6F6;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table > tbody > tr:hover {
+  background-color: #99e3ff;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table > tbody > tr > th,
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table > tbody > tr > td {
+  border: 1px solid #EEE;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table > tbody > tr > th > a,
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table > tbody > tr > td > a {
+  color: #333;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table > tbody > tr > th > .fa-circle.success,
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table > tbody > tr > td > .fa-circle.success {
+  color: #67b168;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table > tbody > tr > th > .fa-circle.danger,
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table > tbody > tr > td > .fa-circle.danger {
+  color: #fc5f5f;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table > tfoot > tr > th,
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table > tfoot > tr > td {
+  color: #333;
+}
+body > div.principal > div.centro > div.centro-container > div.box > nav > ul.pagination > li:hover > a {
+  background-color: #0f6584;
+  border-color: #0f6584;
+  color: #FFF;
+}
+body > div.principal > div.centro > div.centro-container > div.box > nav > ul.pagination > li.active > a {
+  background-color: #0f6584;
+  border-color: #0f6584;
+  color: #FFF;
+}
+body > div.principal > div.centro > div.centro-container > div.box > nav > ul.pagination > li > a {
+  color: #0f6584;
+}
+body > div.principal > div.centro > div.centro-container > div.box div.botoes-canvas > div > button.enabled,
+body > div.principal > div.centro > div.centro-container > div.box div.botoes-canvas > div > button:hover {
+  background-color: #00B8FF;
+  color: #FFF;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.documentos {
+  color: #333;
+  background-color: #F2F2F2;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.documentos > h2 {
+  background-color: #F2F2F2;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.documentos > h2 > button {
+  color: #333;
+  background: none;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.documentos > div.documentos-container > div.documento {
+  background-color: #FFF;
+  -webkit-box-shadow: 0 1px 10px 1px rgba(60, 60, 60, 0.3);
+  -moz-box-shadow: 0 1px 10px 1px rgba(60, 60, 60, 0.3);
+  box-shadow: 0 1px 10px 1px rgba(60, 60, 60, 0.3);
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.documentos > div.documentos-container > div.documento > p {
+  background: transparent;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.documentos > div.documentos-container > div.documento > p > span {
+  background-color: transparent;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.documentos > div.documentos-container > div.documento > p > span.selected {
+  background-color: #00B8FF;
+  color: #FFF;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.documentos > div.documentos-container > div.documento > p > span.highlight {
+  background-color: #99e3ff;
+  color: #333;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes {
+  color: #333;
+  background-color: #F2F2F2;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > h2 {
+  background-color: #F2F2F2;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > h2 > button {
+  color: #333;
+  background: none;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao {
+  background-color: #FFF;
+  -webkit-box-shadow: 0 1px 10px 1px rgba(60, 60, 60, 0.3);
+  -moz-box-shadow: 0 1px 10px 1px rgba(60, 60, 60, 0.3);
+  box-shadow: 0 1px 10px 1px rgba(60, 60, 60, 0.3);
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.verbo.causa,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.causa.causa,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.efeito.causa,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.verbo.efeito,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.causa.efeito,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.efeito.efeito {
+  color: #999;
+  background-color: #F2F2F2;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.verbo.causa.active,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.causa.causa.active,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.efeito.causa.active,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.verbo.efeito.active,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.causa.efeito.active,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.efeito.efeito.active {
+  color: #333;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.questao {
+  color: #333;
+  background-color: #FFF600;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.reforco {
+  background-color: #fc5f5f;
+  color: #FFF;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.balanceamento {
+  background-color: #00B8FF;
+  color: #FFF;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > div.aba {
+  background-color: #EEE;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > div.aba.excluir {
+  background-color: #fc5f5f;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > div.aba > button {
+  color: #FFF;
+  background: none;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos {
+  color: #333;
+  background-color: #F2F2F2;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > h2 {
+  background-color: #F2F2F2;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > h2 > button {
+  color: #333;
+  background: none;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.conceito {
+  background-color: #FFF;
+  -webkit-box-shadow: 0 1px 10px 1px rgba(60, 60, 60, 0.3);
+  -moz-box-shadow: 0 1px 10px 1px rgba(60, 60, 60, 0.3);
+  box-shadow: 0 1px 10px 1px rgba(60, 60, 60, 0.3);
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.conceito > li > span.questao {
+  color: #333;
+  background-color: #CCC;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.conceito > li > span.valor {
+  color: #FFF;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.conceito > li > span.valor.ct {
+  background-color: #27C874;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.conceito > li > span.valor.pn {
+  background-color: #EF311C;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.conceito > li > span.valor.nc {
+  background-color: #FFD800;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.correspondencia {
+  background-color: #FFF;
+  -webkit-box-shadow: 0 1px 10px 1px rgba(60, 60, 60, 0.3);
+  -moz-box-shadow: 0 1px 10px 1px rgba(60, 60, 60, 0.3);
+  box-shadow: 0 1px 10px 1px rgba(60, 60, 60, 0.3);
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.correspondencia.readydrop {
+  color: #CCC;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.correspondencia.readydrop > li.title {
+  border-color: #CCC;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.correspondencia > span.dropmsg {
+  color: #333;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.correspondencia > li.title {
+  border-color: #CCC;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.correspondencia > li.title > span.excluir > .fa {
+  color: #fc5f5f;
+}
+body > div.rodape {
+  background-color: #FFF;
+  border-top: 1px solid #CCC;
+}
+body > div.rodape.rodape-login {
+  background-color: transparent;
+  border-top: 1px solid #FFF;
+}
+body > div.rodape.rodape-login > div.container > p {
+  color: #FFF;
+  text-shadow: 0px 0px 4px #000000 !important;
+}
+body > div.rodape > div.container > p {
+  color: #333;
+}
+body > div.erro {
+  background: url(../images/error.png) #FFF no-repeat center 15px;
+  border: 1px solid #CCC;
+  color: #333;
+  -webkit-box-shadow: 0 3px 10px 1px rgba(60, 60, 60, 0.6);
+  -moz-box-shadow: 0 3px 10px 1px rgba(60, 60, 60, 0.6);
+  box-shadow: 0 3px 10px 1px rgba(60, 60, 60, 0.6);
+}
+body > div.erro > p > a {
+  color: #333;
+}
+body > div.erro > p > a:hover {
+  color: #00B8FF;
+}
+/*# sourceMappingURL=theme.css.map */

@@ -1,0 +1,55 @@
+.boxshadow(@x; @y; @blur; @spread; @color) {
+    -webkit-box-shadow: @x @y @blur @spread @color;
+    -moz-box-shadow: @x @y @blur @spread @color;
+    box-shadow: @x @y @blur @spread @color;
+}
+
+.transition(@property; @fx; @time) {
+    -webkit-transition: @property @time @fx;
+    -moz-transition: @property @time @fx;
+    -o-transition: @property @time @fx;
+    transition: @property @time @fx;
+}
+
+.placeholder-style(@color) {
+    &::-webkit-input-placeholder {
+        color: @color;
+    }
+
+    &:-moz-placeholder {
+        color: @color;
+    }
+
+    &::-moz-placeholder {
+        color: @color;
+    }
+
+    &:-ms-input-placeholder {  
+        color: @color;
+    }
+}
+
+.blur(@blur) {
+    -webkit-filter: blur(@blur);
+    -moz-filter: blur(@blur);
+    -o-filter: blur(@blur);
+    -ms-filter: blur(@blur);
+    filter: blur(@blur);
+}
+
+.opacity(@opacity) {
+    -moz-opacity: @opacity;
+    -khtml-opacity: @opacity;
+    opacity: @opacity;
+}
+
+.border-radius(@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.flexitem(@order) {
+    -webkit-order: @order;
+    order: @order;
+}

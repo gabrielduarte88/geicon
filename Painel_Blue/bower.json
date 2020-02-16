@@ -1,0 +1,41 @@
+{
+    "name": "Blue",
+    "description": "Blue KMS",
+    "main": "main.js",
+    "moduleType": [],
+    "keywords": [
+        "blue",
+        "kms"
+    ],
+    "authors": [
+        "Gabriel Duarte"
+    ],
+    "license": "MIT",
+    "homepage": "www.bluekms.com.br",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "src/main/webapp/res/components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "jquery": "1.11.1",
+        "bootstrap": "3.3.6",
+        "jquery-ui": "1.11.4",
+        "fontawesome": "4.6.3",
+        "normalize-css": "3.0.3",
+        "animate.css": "3.5.1",
+        "jquery.scrollTo": "2.1.2",
+        "jquery-validate": "1.15.0",
+        "jquery-maskedinput": "1.4.1",
+        "jquery.alphanumeric": "1.0.0",
+        "blockui": "*",
+        "iCheck": "1.0.2",
+        "EaselJS": "0.8.2",
+        "PreloadJS": "0.6.2",
+        "TweenJS": "0.6.2"
+    }
+}

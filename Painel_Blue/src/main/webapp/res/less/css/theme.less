@@ -1,0 +1,708 @@
+// Core variables and mixins
+@import "../../components/bootstrap/less/variables.less";
+@import "../../components/bootstrap/less/mixins.less";
+@import "../blue/mixins.less";
+@import "../blue/defaults.less";
+
+@bgcolor: #004A66;
+@bgcolor2: #0f6584;
+@activecolor: #00B8FF;
+@darkcolor: darken(@activecolor, 30%);
+
+@successcolor: #67b168;
+@warningcolor: #FFF600;
+@infocolor: #99CCF2;
+@dangercolor: #fc5f5f;
+
+div.modal {
+    background-color: #FFF;
+
+    .boxshadow(0, 3px, 10px, 1px, rgba(60, 60, 60, .6));
+
+    &>div.modal-text {
+        color: #666;
+
+        &>.fa {
+            &.fa-warning {
+                color: #F00;
+            }
+            &.fa-thumbs-o-up {
+                color: #090;
+            }
+        }
+    }
+}
+
+button, button.btn {
+    background-color: @activecolor;
+    color: #FFF;
+
+    &.btn-success {
+        background-color: @successcolor;
+    }
+    &.btn-warning {
+        background-color: @warningcolor;
+        color: #333;
+    }
+    &.btn-info {
+        background-color: @infocolor;
+    }
+    &.btn-danger {
+        background-color: @dangercolor;
+    }
+    &.btn-default {
+        background-color: #CFCFCF;
+        color: #333;
+    }
+
+    &:active, &:visited {
+        background-color: lighten(@activecolor, 10%);
+        color: #FFF;
+
+        &.btn-success {
+            background-color: lighten(@successcolor, 10%);
+        }
+        &.btn-warning {
+            background-color: lighten(@warningcolor, 10%);
+            color: #333;
+        }
+        &.btn-info {
+            background-color: lighten(@infocolor, 10%);
+        }
+        &.btn-danger {
+            background-color: lighten(@dangercolor, 10%);
+        }
+        &.btn-default {
+            background-color: lighten(#CFCFCF, 10%);
+            color: #333;
+        }
+    }
+    &:hover, &:focus {
+        background-color: darken(@activecolor, 10%);
+        color: #FFF;
+
+        &.btn-success {
+            background-color: darken(@successcolor, 10%);
+        }
+        &.btn-warning {
+            background-color: darken(@warningcolor, 10%);
+            color: #333;
+        }
+        &.btn-info {
+            background-color: darken(@infocolor, 10%);
+        }
+        &.btn-danger {
+            background-color: darken(@dangercolor, 10%);
+        }
+        &.btn-default {
+            background-color: darken(#CFCFCF, 10%);
+            color: #333;
+        }
+    }
+}
+
+body {
+    color: #333;
+    background-color: #FFF;
+
+    &.login {
+        color: #FFF;
+        background-color: @bgcolor;
+    }
+
+    &>div.loading {
+        background: url(../images/ring.svg) #F2F2F2 no-repeat center center;
+    }
+
+    &>div.container {
+        &>a {
+            color: #FFF;
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 1) !important;
+
+            &>hr {
+                border-top: 1px solid #FFF;
+            }
+        }
+
+        &>div.login-container {
+            &>div.login {
+                background-color: #FFF;
+                border: 1px solid #FFF;
+                color: #FFF;
+
+                .boxshadow(0, 3px, 10px, 1px, rgba(60, 60, 60, .6));
+
+                &>form {
+                    &>h2 {
+                        background: url(../images/bg.png) @darkcolor no-repeat center -160px;
+                    }
+
+                    &>div.form-group {
+                        &.focused {
+                            &>div.input-group {
+                                &>span.input-group-addon {
+                                    color: @activecolor;
+                                }
+                            }
+                        }
+                        &.error {
+                            &>div.input-group {
+                                &>span.input-group-addon {
+                                    color: #F77;
+
+                                    &>.fa {
+                                        color: #F77;
+                                    }
+                                }
+                                &>input.form-control {
+                                    color: #F77;
+                                }
+                            }
+                        }
+
+                        &>div.input-group {
+                            background-color: transparent;
+
+                            &>span.input-group-addon {
+                                border-right: 1px solid #CCC;
+                                background: transparent;
+                                color: @darkcolor;
+                            }
+                            &>input.form-control {
+                                border-bottom: 1px solid #CCC;
+                                color: #666;
+                                background-color: transparent;
+
+                                .placeholder-style(#999);
+                            }
+                        }
+
+                        &>a {
+                            color: #FFF;
+                        }
+                    }
+
+                    &>a {
+                        color: @darkcolor;
+
+                        &>hr {
+                            border-top: 1px solid @darkcolor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &>div.topo {
+        border-bottom: 1px solid #999;
+        background-color: @bgcolor;
+
+        .boxshadow(0, 1px, 10px, 1px, rgba(60, 60, 60, .3));
+
+        &>h2 {
+            &>a {
+                color: #FFF;
+            }
+
+            &>hr {
+                border-top: 1px solid #FFF;
+            }
+        }
+
+        &>button.btnMenu {
+            background: none !important;
+            color: #FFF;
+        }
+
+        &>div.meusdados {
+            color: #FFF;
+
+            &>a {
+                color: #FFF;
+            }
+
+            &>ul {
+                background-color: #FEFEFE;
+                border: 1px solid #999;
+
+                .boxshadow(0, 3px, 10px, 1px, rgba(60, 60, 60, .3));
+
+                &>li {
+                    color: @darkcolor;
+
+                    &.sep {
+                        border-top: 1px solid #999;
+                    }
+
+                    &>a {
+                        color: @darkcolor;
+
+                        &:hover {
+                            color: @activecolor;
+                        }
+                    }
+                }
+            }
+        }
+
+        &>hr {
+            border-top: 3px solid #FFF;
+            border-color: lighten(@activecolor, 35%);
+        }
+    }
+
+    &>div.principal {
+        background-color: #FFF;
+
+        &>div.menu {
+            background-color: #F0F0F0; 
+
+            .boxshadow(0, 1px, 10px, 1px, rgba(60, 60, 60, .3));
+
+            &>div.menu-container {
+                &>ul {
+                    &>li {
+                        border-bottom: 1px solid #CCC;
+
+                        &>a {
+                            color: #333;
+                            background-color: #F2F2F2;
+
+                            &:hover {
+                                background-color: @bgcolor2;
+                                color: #FFF;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &>div.centro {
+            background-color: #FFF;
+
+            &>div.centro-container {
+                &>h1 {
+                    color: #666;
+                }
+                &>p {
+                    color: #333;
+
+                    &>a {
+                        color: #333;
+
+                        &:hover {
+                            color: @activecolor;
+                        }
+                    }
+                }
+
+                &>hr {
+                    border-color: #CCC;
+                }
+
+                &>div.box {
+                    color: #333;
+
+                    &>p {
+                        color: #333;
+                    }
+
+                    &>form {
+                        &>label {
+                            color: #333;
+                        }
+
+                        &>div.form-group {
+                            &.focused {
+                                &>label {
+                                    color: @activecolor;
+                                }
+                            }
+                            &.error {
+                                &>label {
+                                    color: @dangercolor;
+                                }
+                                &>select {
+                                    color: @dangercolor;
+                                    border: 1px solid @dangercolor;
+                                }
+                                &>input.form-control {
+                                    color: @dangercolor;
+                                    border-bottom: 1px solid @dangercolor;
+                                }
+                                &>textarea.form-control {
+                                    color: @dangercolor;
+                                    border-color: @dangercolor;
+                                }
+                            }
+
+                            &>label {
+                                color: #999;
+
+                                &>button {
+                                    background: none;
+                                    border: none;
+                                    color: #333;
+                                }
+                            }
+
+                            &>select {
+                                color: #333;
+
+                                &[disabled] {
+                                    border-color: #CCC;
+                                    color: #CCC;
+                                }
+                            }
+
+                            &>input.form-control-static {
+                                color: #333;
+                            }
+
+                            &>textarea.form-control {
+                                background-color: #FCFCFC;
+                            }
+                            &>input.form-control {
+                                border-bottom: 1px solid #CCC;
+                                color: #000;
+                                background-color: transparent;
+
+                                .placeholder-style(#999);
+
+                                &:focus {
+                                    border-bottom: 1px solid @activecolor;
+                                }
+                            }
+
+                            &>p.help-block {
+                                color: #999;
+                            }
+                        }
+                    }
+
+                    &>div.table-container {
+                        &>div.acoes {
+                            &>div.filtro {
+                                color: #333;
+
+                                &>input[type=text], &>select {
+                                    border: 1px solid #CCC;
+
+                                    .placeholder-style(#999);
+
+                                    &:focus {
+                                        border: 1px solid @activecolor;
+                                    }
+                                }
+                            }
+                        }
+
+                        &>table.table {
+                            border-bottom: 1px solid #CCC;
+
+                            &>thead {
+                                &>tr {
+                                    &>th {
+                                        background-color: @bgcolor2;
+                                        color: #FFF;
+
+                                        &>a.ordem {
+                                            color: #FFF;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &>tbody {
+                                &>tr {
+                                    background-color: #FFF;
+                                    color: #333;
+
+                                    &:nth-child(even) {
+                                        background-color: #F6F6F6;
+                                    }
+                                    &:hover {
+                                        background-color: lighten(@activecolor, 30%);
+                                    }
+
+                                    &>th, &>td {
+                                        border: 1px solid #EEE;
+
+                                        &>a {
+                                            color: #333;
+                                        }
+
+                                        &>.fa-circle {
+                                            &.success {
+                                                color: @successcolor;
+                                            }
+                                            &.danger {
+                                                color: @dangercolor;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            &>tfoot {
+                                &>tr {
+                                    &>th, &>td {
+                                        color: #333;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &>nav {
+                        &>ul.pagination {
+                            &>li {
+                                &:hover {
+                                    &>a {
+                                        background-color: @bgcolor2;
+                                        border-color: @bgcolor2;
+                                        color: #FFF;
+                                    }
+                                }
+                                &.active {
+                                    &>a {
+                                        background-color: @bgcolor2;
+                                        border-color: @bgcolor2;
+                                        color: #FFF;
+                                    }
+                                }
+
+                                &>a {
+                                    color: @bgcolor2;
+                                }
+                            }
+                        }
+                    }
+                    
+                    div.botoes-canvas {
+                        &>div {
+                            &>button {
+                                &.enabled, &:hover {
+                                    background-color: @activecolor;
+                                    color: #FFF;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                /* ELICITACAO */
+                &>div.box-elicitacao {
+                    &>div.documentos {
+                        color: #333;
+                        background-color: #F2F2F2;
+
+                        &>h2 {
+                            background-color: #F2F2F2;
+
+                            &>button {
+                                color: #333;
+                                background: none;
+                            }
+                        }
+                        &>div.documentos-container {   
+                            &>div.documento {
+                                background-color: #FFF;
+
+                                .boxshadow(0, 1px, 10px, 1px, rgba(60, 60, 60, .3));
+
+                                &>p {
+                                    background: transparent;
+
+                                    &>span {
+                                        background-color: transparent;
+
+                                        &.selected {
+                                            background-color: @activecolor;
+                                            color: #FFF;
+                                        }
+                                        &.highlight {
+                                            background-color: lighten(@activecolor, 30%);
+                                            color: #333;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &>div.proposicoes {
+                        color: #333;
+                        background-color: #F2F2F2;
+
+                        &>h2 {
+                            background-color: #F2F2F2;
+                            
+                            &>button {
+                                color: #333;
+                                background: none;
+                            }
+                        }
+                        &>div.proposicoes-container {
+                            &>div.proposicao {
+                                background-color: #FFF;
+
+                                .boxshadow(0, 1px, 10px, 1px, rgba(60, 60, 60, .3));
+
+                                &>span.verbo, &>span.causa, &>span.efeito {
+                                    &.verbo {
+                                    }
+                                    &.causa, &.efeito {
+                                        color: #999;
+                                        background-color: #F2F2F2;
+
+                                        &.active {
+                                            color: #333;
+                                        }
+                                    }
+                                }
+                                &>span.questao {
+                                    color: #333;
+                                    background-color: @warningcolor;
+                                }
+                                &>span.reforco {
+                                    background-color: @dangercolor;
+                                    color: #FFF;
+                                }
+                                &>span.balanceamento {
+                                    background-color: @activecolor;
+                                    color: #FFF;
+                                }
+
+                                &>div.aba {
+                                    background-color: #EEE;
+
+                                    &.excluir {
+                                        background-color: @dangercolor;
+                                    }
+
+                                    &>button {
+                                        color: #FFF;
+                                        background: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &>div.conceitos {
+                        color: #333;
+                        background-color: #F2F2F2;
+
+                        &>h2 {
+                            background-color: #F2F2F2;
+                            
+                            &>button {
+                                color: #333;
+                                background: none;
+                            }
+                        }
+                        &>div.conceitos-container {
+                            &>ul.conceito {
+                                background-color: #FFF;
+
+                                &>li {
+                                    &>span.questao {
+                                        color: #333;
+                                        background-color: #CCC;
+                                    }
+                                    &>span.valor {
+                                        color: #FFF;
+                                        
+                                        &.ct {
+                                            background-color: #27C874;
+                                        }
+                                        &.pn {
+                                            background-color: #EF311C;
+                                        }
+                                        &.nc {
+                                            background-color: #FFD800;
+                                        }
+                                    }
+                                }
+
+                                .boxshadow(0, 1px, 10px, 1px, rgba(60, 60, 60, .3));
+                            }
+                            &>ul.correspondencia {
+                                background-color: #FFF;
+
+                                &.readydrop {
+                                    color: #CCC;
+
+                                    &>li.title {
+                                        border-color: #CCC;
+                                    }
+                                }
+
+                                &>span.dropmsg {
+                                    color: #333;
+                                }
+
+                                &>li.title {
+                                    border-color: #CCC;
+
+                                    &>span.excluir {
+                                        &>.fa {
+                                            color: @dangercolor;
+                                        }
+                                    }
+                                }
+
+                                .boxshadow(0, 1px, 10px, 1px, rgba(60, 60, 60, .3));
+                            }
+                        }
+                    }
+                }
+                /* FIM - ELICITACAO */
+            }
+        }
+    }
+
+    &>div.rodape {
+        background-color: #FFF;
+        border-top: 1px solid #CCC;
+
+        &.rodape-login {
+            background-color: transparent;
+            border-top: 1px solid #FFF;
+
+            &>div.container {
+                &>p {
+                    color: #FFF;
+                    text-shadow: 0px 0px 4px rgba(0, 0, 0, 1) !important;
+                }
+            }
+        }
+
+        &>div.container {
+            &>p {
+                color: #333;
+            }
+        }
+    }
+
+    &>div.erro {
+        background: url(../images/error.png) #FFF no-repeat center 15px;
+        border: 1px solid #CCC;
+        color: #333;
+
+        .boxshadow(0, 3px, 10px, 1px, rgba(60, 60, 60, .6));
+
+        &>p {
+            &>a {
+                color: #333;
+
+                &:hover {
+                    color: @activecolor;
+                }
+            }
+        }
+    }
+}

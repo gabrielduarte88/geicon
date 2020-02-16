@@ -1,0 +1,23 @@
+{
+  "name": "jquery.alphanumeric",
+  "main": "jquery.alphanumeric.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/lazarofl/jquery.alphanumeric",
+  "authors": [
+    "Lazaro Fernandes Lima <lazaro.fl@gmail.com>"
+  ],
+  "description": "port of jquery.alphanumeric, a really decent filter for form input. works best with jquery.validate",
+  "keywords": [
+    "jquery",
+    "alphanumeric",
+    "validate"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

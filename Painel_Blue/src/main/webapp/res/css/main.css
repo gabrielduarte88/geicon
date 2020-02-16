@@ -1,0 +1,1651 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic);
+* {
+  outline: none !important;
+  text-shadow: none !important;
+  resize: none;
+}
+*::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+}
+*::-webkit-scrollbar {
+  width: 6px!important;
+  height: 6px!important;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+a,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none !important;
+}
+button {
+  background-image: none !important;
+}
+div.modal {
+  width: 450px;
+  height: 150px;
+  margin: auto;
+  margin-top: 40px;
+  display: none;
+  overflow: hidden;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+div.modal.large {
+  width: 90%;
+}
+@media (max-width: 767px) {
+  div.modal {
+    width: 90%;
+  }
+}
+div.modal > span.close > .fa {
+  margin-right: 3px;
+}
+div.modal > div.modal-text {
+  font-size: 18px;
+  font-weight: 300;
+  padding: 20px;
+}
+div.modal > div.modal-text > .fa {
+  margin-right: 3px;
+}
+div.modal > div.modal-text > ul {
+  margin: 0;
+  padding: 5px 10px;
+  text-align: left;
+  font-size: 14px;
+}
+div.modal > div.modal-text > div.onbody h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 15px 0;
+}
+div.modal > div.modal-text > div.onbody > div {
+  float: left;
+  width: 100%;
+  margin-bottom: 15px;
+}
+div.modal > div.modal-text > div.onbody > div p {
+  text-align: left;
+  float: left;
+  width: 375px;
+  margin: -5px 0 0 0;
+  padding: 0;
+  padding-left: 10px;
+  vertical-align: top;
+}
+div.modal > div.modal-text > div.onbody > div button {
+  float: left;
+  border: none;
+  width: 35px;
+  height: 30px;
+  padding: 0;
+  text-align: center;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+div.modal > div.modal-text > div.onbody > div button.ct {
+  background-color: #27C874;
+}
+div.modal > div.modal-text > div.onbody > div button.pn {
+  background-color: #EF311C;
+}
+div.modal > div.modal-text > div.onbody > div button.nc {
+  background-color: #FFD800;
+}
+div.modal > div.modal-text > div.buttons {
+  margin: 10px 0;
+}
+div.modal > div.modal-text > div.buttons > button {
+  border: none;
+  font-size: 15px;
+  height: 30px;
+  padding: 0 14px;
+  font-weight: 400;
+  margin: 0 10px 5px 10px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+div.modal > div.modal-text > div.buttons > button.full {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.boxshadow-none {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.flexbox {
+  display: -webkit-flex;
+  display: flex;
+}
+.flexbox-column {
+  -webkit-flex-flow: column;
+  flex-flow: column;
+}
+.unselectable {
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.overflow-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.popover-content {
+  font-size: 13px;
+  line-height: 18px;
+}
+.borderfx:hover > hr {
+  width: 100%;
+}
+.borderfx > hr {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  width: 0;
+  margin: auto;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+body {
+  font-family: 'Lato', Arial;
+  font-size: 15px;
+}
+body > div.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+body > div.container > a {
+  float: left;
+  margin: 20px 0 0 0;
+  font-weight: 400;
+  font-size: 25px;
+  position: relative;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+body > div.container > a:hover > hr {
+  width: 100%;
+}
+body > div.container > a > hr {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  width: 0;
+  margin: auto;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+body > div.container > div.login-container {
+  width: 600px;
+  margin: 150px auto 0 auto;
+}
+@media (max-width: 767px), (max-height: 725px) {
+  body > div.container > div.login-container {
+    width: 400px;
+  }
+}
+@media (max-width: 479px) {
+  body > div.container > div.login-container {
+    width: 100%;
+  }
+}
+@media (max-height: 810px) {
+  body > div.container > div.login-container {
+    margin: 70px auto 0 auto;
+  }
+}
+body > div.container > div.login-container > div.login {
+  float: left;
+  width: 100%;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+body > div.container > div.login-container > div.login > form {
+  float: left;
+  width: 100%;
+}
+body > div.container > div.login-container > div.login > form#recuperarSenha {
+  display: none;
+}
+body > div.container > div.login-container > div.login > form > h2 {
+  margin: 0 0 60px 0;
+  padding: 150px 20px 20px 20px;
+  font-size: 30px;
+  font-weight: 300;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+@media (max-width: 767px), (max-height: 725px) {
+  body > div.container > div.login-container > div.login > form > h2 {
+    font-size: 20px;
+    margin: 0 0 30px 0;
+    padding: 20px 20px 20px 20px;
+  }
+}
+body > div.container > div.login-container > div.login > form > div.form-group {
+  margin: 0 50px 30px 50px;
+}
+@media (max-width: 767px), (max-height: 725px) {
+  body > div.container > div.login-container > div.login > form > div.form-group {
+    margin: 0 50px 15px 50px;
+  }
+}
+@media (max-width: 479px) {
+  body > div.container > div.login-container > div.login > form > div.form-group {
+    margin: 0 auto 15px auto;
+    width: 90%;
+  }
+}
+body > div.container > div.login-container > div.login > form > div.form-group > div.input-group {
+  width: 100%;
+  height: 60px;
+  position: relative;
+}
+@media (max-width: 767px), (max-height: 725px) {
+  body > div.container > div.login-container > div.login > form > div.form-group > div.input-group {
+    height: 50px;
+  }
+}
+body > div.container > div.login-container > div.login > form > div.form-group > div.input-group > span.input-group-addon {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  z-index: 10;
+  border: none;
+  width: 58px;
+  height: 58px;
+  padding: 0;
+  padding-top: 16px;
+  text-align: center;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+@media (max-width: 767px), (max-height: 725px) {
+  body > div.container > div.login-container > div.login > form > div.form-group > div.input-group > span.input-group-addon {
+    width: 38px;
+    height: 38px;
+    padding-top: 8px;
+  }
+}
+body > div.container > div.login-container > div.login > form > div.form-group > div.input-group > span.input-group-addon > .fa {
+  font-size: 30px;
+}
+@media (max-width: 767px), (max-height: 725px) {
+  body > div.container > div.login-container > div.login > form > div.form-group > div.input-group > span.input-group-addon > .fa {
+    font-size: 20px;
+  }
+}
+body > div.container > div.login-container > div.login > form > div.form-group > div.input-group > input.form-control {
+  float: left;
+  width: 100%;
+  border: none;
+  height: 60px;
+  font-size: 19px;
+  padding-left: 70px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+@media (max-width: 767px), (max-height: 725px) {
+  body > div.container > div.login-container > div.login > form > div.form-group > div.input-group > input.form-control {
+    height: 40px;
+    font-size: 16px;
+    padding-left: 50px;
+  }
+}
+body > div.container > div.login-container > div.login > form > a {
+  float: left;
+  font-size: 19px;
+  padding-top: 14.5px;
+  font-weight: 400;
+  position: relative;
+  margin: 0 0 40px 50px;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+@media (max-width: 767px), (max-height: 725px) {
+  body > div.container > div.login-container > div.login > form > a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 479px) {
+  body > div.container > div.login-container > div.login > form > a {
+    margin-left: 5%;
+  }
+}
+body > div.container > div.login-container > div.login > form > a:hover > hr {
+  width: 100%;
+}
+body > div.container > div.login-container > div.login > form > a > hr {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  width: 0;
+  margin: auto;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+body > div.container > div.login-container > div.login > form > button {
+  float: right;
+  border: none;
+  font-size: 22px;
+  padding: 14.5px 24.5px;
+  font-weight: 300;
+  margin: 0 50px 50px 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+@media (max-width: 767px), (max-height: 725px) {
+  body > div.container > div.login-container > div.login > form > button {
+    font-size: 16px;
+    padding: 14.5px 24.5px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 479px) {
+  body > div.container > div.login-container > div.login > form > button {
+    margin-right: 5%;
+  }
+}
+body > div.topo {
+  position: absolute;
+  z-index: 2;
+  float: left;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  padding-top: 12px;
+  -webkit-box-shadow: 0 1px 10px 1px rgba(60, 60, 60, 0.3);
+  -moz-box-shadow: 0 1px 10px 1px rgba(60, 60, 60, 0.3);
+  box-shadow: 0 1px 10px 1px rgba(60, 60, 60, 0.3);
+}
+body > div.topo > h2 {
+  float: left;
+  width: auto;
+  margin: 0 0 0 15px;
+  padding: 0;
+  padding-bottom: 2px;
+  font-weight: 400;
+  position: relative;
+}
+body > div.topo > h2:hover > hr {
+  width: 100%;
+}
+body > div.topo > h2 > hr {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  width: 0;
+  margin: auto;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+body > div.topo > button.btnMenu {
+  float: left;
+  border: none;
+  font-size: 18px;
+  margin-left: 128px;
+  margin-top: 3px;
+}
+@media (max-width: 767px) {
+  body > div.topo > button.btnMenu {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 479px) {
+  body > div.topo > button.btnMenu {
+    margin-left: 0;
+  }
+}
+body > div.topo > div.meusdados {
+  float: right;
+  font-size: 15px;
+  margin-top: 2px;
+  padding: 5px 10px;
+  position: relative;
+}
+@media (max-width: 480px) {
+  body > div.topo > div.meusdados {
+    position: static;
+  }
+}
+body > div.topo > div.meusdados > a {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 300;
+}
+body > div.topo > div.meusdados > a > span {
+  display: inline-block;
+  max-width: 650px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media (max-width: 991px) {
+  body > div.topo > div.meusdados > a > span {
+    max-width: 350px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 767px) {
+  body > div.topo > div.meusdados > a > span {
+    max-width: 200px;
+  }
+}
+@media (max-width: 479px) {
+  body > div.topo > div.meusdados > a > span {
+    display: none;
+  }
+}
+body > div.topo > div.meusdados > a > .fa-caret-down {
+  float: right;
+  margin: 3px;
+}
+body > div.topo > div.meusdados > a > .fa-user {
+  display: none;
+}
+@media (max-width: 479px) {
+  body > div.topo > div.meusdados > a > .fa-user {
+    display: inline-block;
+  }
+}
+body > div.topo > div.meusdados > ul {
+  position: absolute;
+  top: 25px;
+  right: 8px;
+  width: 300px;
+  list-style: none;
+  padding: 10px 20px;
+  margin: 0;
+  z-index: 20;
+  display: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+@media (max-width: 480px) {
+  body > div.topo > div.meusdados > ul {
+    width: 96%;
+    margin: 0 2%;
+    right: 0;
+    top: 40px;
+  }
+}
+body > div.topo > div.meusdados > ul > li {
+  margin: 0;
+  padding: 0;
+  padding: 7px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+body > div.topo > div.meusdados > ul > li.sep {
+  margin-top: 10px;
+  padding-top: 15px;
+}
+body > div.topo > div.meusdados > ul > li > a {
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+body > div.topo > div.meusdados > ul > li > a > .fa {
+  margin-right: 5px;
+}
+body > div.topo > div.meusdados > ul > li > select {
+  width: 100%;
+  height: 40px;
+  margin-top: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+body > div.topo > hr.loading {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  width: 1px;
+  display: none;
+  z-index: 1;
+}
+body > div.principal {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+body > div.principal > div.menu {
+  float: left;
+  width: 250px;
+  height: 100%;
+  margin-left: -200px;
+  position: absolute;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+@media (max-width: 767px) {
+  body > div.principal > div.menu {
+    margin-left: -250px;
+  }
+}
+@media (max-width: 479px) {
+  body > div.principal > div.menu {
+    width: 100%;
+    margin-left: -100%;
+  }
+}
+body > div.principal > div.menu .hoc {
+  display: none;
+}
+body > div.principal > div.menu.open {
+  margin-left: 0;
+}
+body > div.principal > div.menu.open .hoc {
+  display: block;
+}
+body > div.principal > div.menu.open > div.menu-container > ul > li > a {
+  padding: 20px;
+}
+body > div.principal > div.menu.open > div.menu-container > ul > li > a > .fa {
+  float: none;
+  margin-right: 5px;
+}
+@media (max-width: 767px) {
+  body > div.principal > div.menu.open > div.menu-container > ul > li > a > .fa {
+    display: inline-block;
+  }
+}
+body > div.principal > div.menu.open > div.menu-container > ul > li > a > span {
+  display: inline-block;
+}
+body > div.principal > div.menu.open > div.menu-container > ul > li > select {
+  width: 100%;
+  height: 40px;
+  margin-top: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+body > div.principal > div.menu > div.menu-container {
+  float: left;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body > div.principal > div.menu > div.menu-container > ul {
+  float: left;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body > div.principal > div.menu > div.menu-container > ul > li {
+  float: left;
+  width: 100%;
+}
+body > div.principal > div.menu > div.menu-container > ul > li > a {
+  float: left;
+  width: 100%;
+  padding: 20px 16px;
+  font-size: 16px;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+body > div.principal > div.menu > div.menu-container > ul > li > a > .fa {
+  float: right;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+@media (max-width: 767px) {
+  body > div.principal > div.menu > div.menu-container > ul > li > a > .fa {
+    display: none;
+  }
+}
+body > div.principal > div.menu > div.menu-container > ul > li > a > span {
+  display: none;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+body > div.principal > div.centro {
+  float: left;
+  width: 100%;
+  height: 100%;
+  padding-top: 60px;
+  padding-bottom: 42px;
+  padding-left: 250px;
+  padding-right: 0px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+@media (max-width: 991px) {
+  body > div.principal > div.centro {
+    padding-bottom: 38px;
+  }
+}
+@media (max-width: 767px) {
+  body > div.principal > div.centro {
+    padding: 60px 0 38px 0;
+  }
+}
+body > div.principal > div.centro.open {
+  padding-left: 50px;
+}
+@media (max-width: 767px) {
+  body > div.principal > div.centro.open {
+    padding-left: 0;
+  }
+}
+body > div.principal > div.centro.full {
+  padding-left: 20px;
+}
+@media (max-width: 767px) {
+  body > div.principal > div.centro.full {
+    padding-left: 10px;
+  }
+}
+body > div.principal > div.centro > div.centro-container {
+  float: left;
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 15px;
+  overflow: auto;
+  position: relative;
+  /* ELICITACAO */
+  /* FIM - ELICITACAO */
+}
+@media (max-width: 767px) {
+  body > div.principal > div.centro > div.centro-container {
+    padding: 10px;
+  }
+}
+body > div.principal > div.centro > div.centro-container > h1 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+@media (max-width: 479px) {
+  body > div.principal > div.centro > div.centro-container > h1 {
+    font-size: 24px;
+  }
+}
+body > div.principal > div.centro > div.centro-container > h1 > .fa-stack {
+  float: left;
+  font-size: 20px;
+  margin-right: 7px;
+}
+@media (max-width: 479px) {
+  body > div.principal > div.centro > div.centro-container > h1 > .fa-stack {
+    font-size: 14px;
+  }
+}
+body > div.principal > div.centro > div.centro-container > p > a {
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+body > div.principal > div.centro > div.centro-container > button {
+  position: absolute;
+  top: 25px;
+  right: 15px;
+  float: left;
+  border: none;
+  font-size: 15px;
+  padding: 14.5px 24.5px;
+  font-weight: 400;
+  margin: 0 0 0 15px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+body > div.principal > div.centro > div.centro-container > div.buttons {
+  position: absolute;
+  top: 25px;
+  right: 15px;
+  float: left;
+  margin: 0 0 0 15px;
+}
+body > div.principal > div.centro > div.centro-container > div.buttons > button {
+  float: right;
+  border: none;
+  font-size: 15px;
+  padding: 14.5px 24.5px;
+  font-weight: 400;
+  margin: 0 0 0 15px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+body > div.principal > div.centro > div.centro-container > hr {
+  float: left;
+  width: 100%;
+  max-width: 800px;
+  clear: both;
+}
+body > div.principal > div.centro > div.centro-container > div.box {
+  float: left;
+  width: 100%;
+  padding: 20px 0;
+}
+@media (max-width: 767px) {
+  body > div.principal > div.centro > div.centro-container > div.box {
+    padding: 0;
+  }
+}
+body > div.principal > div.centro > div.centro-container > div.box > h2 {
+  font-size: 22px;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form {
+  float: left;
+  width: 100%;
+  max-width: 800px;
+  padding-right: 10px;
+  clear: both;
+}
+@media (max-width: 767px) {
+  body > div.principal > div.centro > div.centro-container > div.box > form {
+    padding-right: 0;
+  }
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.checkbox,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.radio {
+  float: left;
+  width: 100%;
+  margin-bottom: 25px;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group.labelfor,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.checkbox.labelfor,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.radio.labelfor {
+  margin-bottom: 0;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group.icheck,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.checkbox.icheck,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.radio.icheck {
+  margin-bottom: 5px;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group.checkbox > label,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.checkbox.checkbox > label,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.radio.checkbox > label,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group.radio > label,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.checkbox.radio > label,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.radio.radio > label {
+  padding: 0;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group > label,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.checkbox > label,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.radio > label {
+  float: left;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group > label > button,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.checkbox > label > button,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.radio > label > button {
+  border: none;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group > select,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.checkbox > select,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.radio > select {
+  width: 100%;
+  height: 40px;
+  margin-top: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group > input.form-control,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.checkbox > input.form-control,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.radio > input.form-control {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  float: left;
+  width: 100%;
+  border: none;
+  height: 40px;
+  font-size: 15px;
+  padding: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group > p.form-control-static,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.checkbox > p.form-control-static,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.radio > p.form-control-static {
+  float: left;
+  width: 100%;
+  border: none;
+  height: 40px;
+  line-height: 40px;
+  font-size: 15px;
+  padding: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group > textarea.form-control,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.checkbox > textarea.form-control,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.radio > textarea.form-control {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  float: left;
+  width: 100%;
+  height: 100px;
+  font-size: 15px;
+  padding: 0;
+  border-left: none;
+  border-right: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group > textarea.form-control.lg,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.checkbox > textarea.form-control.lg,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.radio > textarea.form-control.lg {
+  height: 400px;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > div.form-group > p.help-block,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.checkbox > p.help-block,
+body > div.principal > div.centro > div.centro-container > div.box > form > div.radio > p.help-block {
+  font-size: 13px;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > button {
+  float: left;
+  border: none;
+  font-size: 15px;
+  padding: 14.5px 24.5px;
+  font-weight: 400;
+  margin: 0 15px 15px 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+body > div.principal > div.centro > div.centro-container > div.box > form > button.pull-right {
+  margin: 0 0 15px 15px;
+}
+@media (max-width: 767px) {
+  body > div.principal > div.centro > div.centro-container > div.box > form > button.pull-right {
+    float: left !important;
+    margin: 0 15px 15px 0;
+  }
+}
+@media (max-width: 767px) {
+  body > div.principal > div.centro > div.centro-container > div.box > form > button {
+    font-size: 16px;
+    padding: 14.5px 24.5px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 479px) {
+  body > div.principal > div.centro > div.centro-container > div.box > form > button {
+    margin-right: 5%;
+  }
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container {
+  float: left;
+  width: 100%;
+  min-width: 600px;
+  padding-right: 5px;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > div.acoes {
+  float: left;
+  width: 100%;
+  font-size: 15px;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > div.acoes > div.filtro {
+  float: left;
+  margin-bottom: 10px;
+}
+@media (max-width: 1199px) {
+  body > div.principal > div.centro > div.centro-container > div.box > div.table-container > div.acoes > div.filtro {
+    float: left;
+    width: 100%;
+  }
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > div.acoes > div.filtro > span {
+  float: left;
+  line-height: 30px;
+  margin: 0 15px;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > div.acoes > div.filtro > span:first-of-type {
+  margin-left: 0;
+}
+@media (max-width: 991px) {
+  body > div.principal > div.centro > div.centro-container > div.box > div.table-container > div.acoes > div.filtro > span {
+    float: left;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > div.acoes > div.filtro > input[type=text],
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > div.acoes > div.filtro > select {
+  float: left;
+  min-width: 180px;
+  height: 30px;
+  font-size: 15px;
+  padding: 0 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > div.acoes > div.filtro > button {
+  float: left;
+  border: none;
+  font-size: 15px;
+  height: 30px;
+  padding: 0 14px;
+  font-weight: 400;
+  margin: 0 0 0 15px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > div.acoes > div.botoes {
+  float: right;
+  margin-bottom: 10px;
+}
+@media (max-width: 1199px) {
+  body > div.principal > div.centro > div.centro-container > div.box > div.table-container > div.acoes > div.botoes {
+    float: left;
+    width: 100%;
+  }
+}
+@media (max-width: 991px) {
+  body > div.principal > div.centro > div.centro-container > div.box > div.table-container > div.acoes > div.botoes {
+    margin: 20px 0;
+  }
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > div.acoes > div.botoes > button {
+  float: left;
+  border: none;
+  font-size: 15px;
+  height: 30px;
+  padding: 0 14px;
+  font-weight: 400;
+  margin: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table {
+  float: left;
+  width: 100%;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table > thead > tr > th {
+  border: none;
+  min-width: 150px;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table > thead > tr > th > a.ordem {
+  float: right;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table > tbody > tr > th.button-container,
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table > tbody > tr > td.button-container {
+  padding: 0 0 1px 0;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table > tbody > tr > th > .fa-circle,
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table > tbody > tr > td > .fa-circle {
+  font-size: 11px;
+}
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table > tbody > tr > th > button,
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table > tbody > tr > td > button,
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table > tbody > tr > th > a > button,
+body > div.principal > div.centro > div.centro-container > div.box > div.table-container > table.table > tbody > tr > td > a > button {
+  border: none;
+  font-size: 15px;
+  height: 31px;
+  padding: 0 14px;
+  font-weight: 400;
+  margin: 2.5px 1px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+body > div.principal > div.centro > div.centro-container > div.box > nav > ul.pagination > li > a {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+body > div.principal > div.centro > div.centro-container > div.box div.botoes-canvas {
+  float: left;
+}
+body > div.principal > div.centro > div.centro-container > div.box div.botoes-canvas > div {
+  float: left;
+  border: 1px solid #CCC;
+  padding: 10px;
+  margin: 0 10px 10px 10px;
+}
+body > div.principal > div.centro > div.centro-container > div.box div.botoes-canvas > div > label {
+  float: left;
+  width: 100%;
+  font-size: 10px;
+}
+body > div.principal > div.centro > div.centro-container > div.box div.botoes-canvas > div > button {
+  float: left;
+  border: none;
+  font-size: 13px;
+  padding: 12px 18px;
+  font-weight: 400;
+  margin: 0 15px 0 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao {
+  float: left;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.documentos {
+  float: left;
+  width: 49%;
+  height: 98%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 55px;
+  border: 1px solid #CCC;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.documentos.fullscreen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.documentos.fullscreen > h2 {
+  padding-top: 65px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.documentos > h2 {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  padding-top: 5px;
+  padding-left: 10px;
+  font-size: 25px;
+  top: 10px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.documentos > h2 > button {
+  float: right;
+  font-size: 14px;
+  border: none;
+  margin-right: -1px;
+  margin-top: -14px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.documentos > button {
+  position: absolute;
+  height: 40px;
+  border: none;
+  top: 10px;
+  right: 15px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.documentos > div.documentos-container {
+  float: left;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  overflow-y: auto;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.documentos > div.documentos-container > div.documento {
+  float: left;
+  width: 100%;
+  margin: 0 0 20px 0;
+  padding: 20px;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.documentos > div.documentos-container > div.documento:last-of-type {
+  margin-bottom: 0;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.documentos > div.documentos-container > div.documento > h3 {
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin: 0 0 10px 0;
+  font-size: 20px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.documentos > div.documentos-container > div.documento > p {
+  float: left;
+  width: 100%;
+  border: none;
+  margin: 0 0 7.5px 0;
+  word-break: normal;
+  word-wrap: normal;
+  font-size: 15px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.documentos > div.documentos-container > div.documento > p span {
+  float: left;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.documentos > div.documentos-container > div.documento > p span.word {
+  cursor: pointer;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes {
+  float: left;
+  width: 50%;
+  height: 48%;
+  padding-top: 55px;
+  border: 1px solid #CCC;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes.fullscreen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes.fullscreen > h2 {
+  padding-top: 65px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > h2 {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  padding-top: 5px;
+  padding-left: 10px;
+  font-size: 25px;
+  top: 10px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > h2 > button {
+  float: right;
+  font-size: 14px;
+  border: none;
+  margin-right: -1px;
+  margin-top: -14px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > button {
+  position: absolute;
+  height: 40px;
+  border: none;
+  top: 10px;
+  right: 22px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container {
+  float: left;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 15px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao {
+  text-align: center;
+  position: relative;
+  margin: 0 0 20px 0;
+  padding: 20px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao:last-of-type {
+  margin-bottom: 0;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao.inicial {
+  font-weight: bold;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > p {
+  margin: 0;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.verbo,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.causa,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.efeito {
+  display: inline-block;
+  min-width: 100px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px;
+  cursor: pointer;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.verbo.verbo > input[type=text],
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.causa.verbo > input[type=text],
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.efeito.verbo > input[type=text] {
+  display: inline-block;
+  min-width: 100px;
+  width: auto;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px;
+  border: none;
+  border-bottom: 1px solid #999;
+  text-align: center;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.verbo.causa,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.causa.causa,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.efeito.causa,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.verbo.efeito,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.causa.efeito,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.efeito.efeito {
+  border-bottom: 1px dotted #333;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.questao,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.reforco,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.balanceamento {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  margin: 0 5px;
+  padding-top: 2px;
+  cursor: pointer;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.questao > .fa,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.reforco > .fa,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > span.balanceamento > .fa {
+  font-size: 20px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > div.aba {
+  position: absolute;
+  width: 40px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > div.aba:hover {
+  width: 120px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > div.aba:hover.peso {
+  width: 400px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > div.aba:hover > button {
+  text-align: center;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > div.aba:hover > button > .fa {
+  margin-right: 3px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > div.aba > button {
+  float: left;
+  width: 120px;
+  height: 100%;
+  border: none;
+  text-align: left;
+  vertical-align: middle;
+  padding: 0 12px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > div.aba > button > .fa {
+  display: inline;
+  font-size: 20px;
+  margin-right: 12px;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.proposicoes > div.proposicoes-container > div.proposicao > div.aba > button > span {
+  font-size: 20px;
+  font-weight: 400px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos {
+  float: left;
+  width: 50%;
+  height: 48%;
+  padding-top: 55px;
+  border: 1px solid #CCC;
+  position: absolute;
+  bottom: 2%;
+  right: 0;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos.fullscreen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos.fullscreen > h2 {
+  padding-top: 65px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > h2 {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  padding-top: 5px;
+  padding-left: 10px;
+  font-size: 25px;
+  top: 10px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > h2 > button {
+  float: right;
+  border: none;
+  font-size: 14px;
+  margin-right: -1px;
+  margin-top: -4px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container {
+  float: left;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.conceito,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.correspondencia {
+  height: 100%;
+  overflow-y: auto;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.conceito > li,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.correspondencia > li {
+  float: left;
+  width: 100%;
+  padding: 5px;
+  cursor: pointer;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.conceito > li.title,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.correspondencia > li.title {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #999;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.conceito > li.title > input[type=text],
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.correspondencia > li.title > input[type=text] {
+  display: inline-block;
+  min-width: 100px;
+  width: auto;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px;
+  border: none;
+  border-bottom: 1px solid #999;
+  text-align: center;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.conceito > li.title > span.excluir,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.correspondencia > li.title > span.excluir {
+  float: right;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.conceito > li > span.questao,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.correspondencia > li > span.questao,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.conceito > li > span.valor,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.correspondencia > li > span.valor {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  margin: 0 5px;
+  padding-top: 2px;
+  cursor: pointer;
+  text-align: center;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.conceito > li > span.questao > .fa,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.correspondencia > li > span.questao > .fa,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.conceito > li > span.valor > .fa,
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.correspondencia > li > span.valor > .fa {
+  font-size: 20px;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.conceito {
+  float: left;
+  width: 100%;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.conceito.open {
+  width: 49%;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.correspondencia {
+  float: right;
+  width: 49%;
+  display: none;
+  position: relative;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.correspondencia.open {
+  display: block;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.correspondencia.readydrop > span.dropmsg {
+  display: block;
+}
+body > div.principal > div.centro > div.centro-container > div.box-elicitacao > div.conceitos > div.conceitos-container > ul.correspondencia > span.dropmsg {
+  display: none;
+  position: absolute;
+  margin: auto;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+body > div.rodape {
+  float: left;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+}
+body > div.rodape.rodape-login.static {
+  position: static;
+  margin-top: 20px;
+}
+body > div.rodape.rodape-login > div.container > p {
+  margin: 20px 0;
+}
+body > div.rodape > div.container {
+  text-align: center;
+}
+body > div.rodape > div.container > p {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+body > div.rodape > div.container > p.mobile {
+  display: none;
+}
+@media (max-width: 991px) {
+  body > div.rodape > div.container > p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
+  body > div.rodape > div.container > p {
+    display: none;
+  }
+  body > div.rodape > div.container > p.mobile {
+    display: block;
+  }
+}
+body > div.erro {
+  width: 600px;
+  padding: 170px 30px 20px 30px;
+  margin: 100px auto 0 auto;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+body > div.erro > h1 {
+  margin: 0 0 5px 0;
+  padding: 0;
+  font-size: 28px;
+  text-align: center;
+}
+body > div.erro > p {
+  margin: 0 0 18px 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+}
+body > div.erro > p > a {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 300;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+/*# sourceMappingURL=main.css.map */

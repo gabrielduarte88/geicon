@@ -1,0 +1,124 @@
+{
+    "proposition": "###PREPOSITION###",
+    "axes": {
+        "X": [
+            {
+                "name": "NC",
+                "fullname": "Controllable on P",
+                "color": "#00A1FF"
+            },
+            {
+                "name": "PN",
+                "fullname": "Penumbra on P",
+                "color": "#00A1FF"
+            },
+            {
+                "name": "CT",
+                "fullname": "Non-controllable on P",
+                "color": "#00A1FF"
+            }
+        ],
+        "Y": [
+            {
+                "name": "CT",
+                "fullname": "Controllable by agent",
+                "color": "#FFB600"
+            },
+            {
+                "name": "PN",
+                "fullname": "Penumbra by agent",
+                "color": "#FFB600"
+            },
+            {
+                "name": "NC",
+                "fullname": "Non-controllable by agent",
+                "color": "#FFB600"
+            }
+        ]
+    },
+    "linkTypes": [
+        {
+            "id": "R",
+            "name": "Reforço",
+            "color": "#333",
+            "style": [1, 0]
+        },
+        {
+            "id": "B",
+            "name": "Balanceamento",
+            "color": "#333",
+            "style": [20, 5, 5, 5]
+        }
+    ],
+    "clusters": [
+        {
+            "id": 1,
+            "name": "NCxCT",
+            "X": 0,
+            "Y": 0,
+            "color": "#27C874"
+        },
+        {
+            "id": 2,
+            "name": "PNxCT",
+            "X": 1,
+            "Y": 0,
+            "color": "#FFD800"
+        },
+        {
+            "id": 3,
+            "name": "CTxCT",
+            "X": 2,
+            "Y": 0,
+            "color": "#27C874"
+        },
+        {
+            "id": 4,
+            "name": "NCxPN",
+            "X": 0,
+            "Y": 1,
+            "color": "#FFD800"
+        },
+        {
+            "id": 5,
+            "name": "PNxPN",
+            "X": 1,
+            "Y": 1,
+            "color": "#EF311C"
+        },
+        {
+            "id": 6,
+            "name": "CTxPN",
+            "X": 2,
+            "Y": 1,
+            "color": "#FFD800"
+        },
+        {
+            "id": 7,
+            "name": "NCxNC",
+            "X": 0,
+            "Y": 2,
+            "color": "#27C874"
+        },
+        {
+            "id": 8,
+            "name": "PNxNC",
+            "X": 1,
+            "Y": 2,
+            "color": "#ffd800"
+        },
+        {
+            "id": 9,
+            "name": "CTxNC",
+            "X": 2,
+            "Y": 2,
+            "color": "#27C874"
+        }
+    ],
+    "nodes": [
+        ###NODES###
+    ],
+    "links": [
+        ###LINKS###
+    ]
+}
