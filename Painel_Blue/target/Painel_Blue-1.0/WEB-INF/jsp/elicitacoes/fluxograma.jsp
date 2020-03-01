@@ -453,8 +453,7 @@
                                         <div class="form-group">
                                             <label for="proposicao">Resposta</label>
                                             <div class="input-group">
-                                                <input type="text" class="form-control" id="proposicao" name="proposicao" maxlength="60"
-                                                       value="Conceito causa verbo conceito efeito" />
+                                                <input type="text" class="form-control" id="proposicao" name="proposicao" maxlength="60" />
                                                 <span class="input-group-btn">
                                                   <button class="btn btn-default" id="adicionarProposicao" type="button">Ok</button>
                                                 </span>

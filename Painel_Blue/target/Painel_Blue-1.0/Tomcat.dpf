@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Context allowLinking="true" antiJARLocking="true" path="">
-  <Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" maxActive="25" maxIdle="15" maxWait="100000" minEvictableIdleTimeMillis="60000" minIdle="5" name="jdbc/blue" password="root" removeAbandoned="true" removeAbandonedTimeout="120000" testWhileIdle="true" timeBetweenEvictionRunsMillis="60000" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/dbKMS?autoReconnect=true&amp;autoReconnectForPools=true&amp;useLegacyDatetime=false;&amp;serverTimeZone=America/Sao_Paulo" username="root" validationQuery="SELECT 1"/>
-</Context>

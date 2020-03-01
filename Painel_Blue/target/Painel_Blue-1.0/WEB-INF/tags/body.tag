@@ -12,7 +12,7 @@
 
 <jsp:doBody var="body"/>
 
-<compress:html enabled="${empty param.debug}" compressJavaScript="true" compressCss="true" simpleDoctype="true">
+<compress:html enabled="${empty param.debug}" compressJavaScript="false" compressCss="true" simpleDoctype="true">
     <!DOCTYPE html>
     <html>
         <head>         
