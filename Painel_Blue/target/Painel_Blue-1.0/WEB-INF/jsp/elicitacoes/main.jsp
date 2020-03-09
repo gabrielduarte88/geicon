@@ -21,6 +21,10 @@
                 if (data != null) {
                     alvo.html(data);
                     inicializarLista();
+                    
+                    if (analisando) {
+                        analisarElicitacao($('.elicitacao:first'));
+                    }
                 }
                 else {
                     showModal("<i class=\"fa fa-warning\"></i> <br /> Lamentamos, mas houve um erro no serviço de listagem. <br />Por favor, tente novamente em instantes.");
@@ -108,11 +112,81 @@
                 $('#valorFiltro').unmask();
             }
         }
+        
+        var analiseCancelada;
+        var analisando;
+        function iniciarAnalise() {
+            $('#btnAnalisar').hide();
+            $('#btnCancelarAnalise').show();
+            
+            analiseCancelada = false;
+            
+            analisando = true;
+            analisarElicitacao($('.elicitacao:first'));
+        }
+        
+        function cancelarAnalise() {
+            $('#btnCancelarAnalise').hide();
+            $('#btnAnalisar').show();
+            analiseCancelada = true;
+        }
+        
+        function analisarElicitacao(el) {
+             var ref = el.attr('ref');
+                
+            if (!analiseCancelada) {
+                analisarContCc('${contextPath}', ref, function(res) {
+                    return function(el) {
+                        el.find('.analise1').html(res);
+                        
+                        analisarFuncPsico('${contextPath}', ref, function(res2) {
+                            return function(el) {
+                                el.find('.analise2').html(res2);
+                                
+                                $.ajax({
+                                    type: 'POST',
+                                    url: '${contextPath}/elicitacoes/' + ref + '/analise',
+                                    data: {
+                                        'elicitacao.analise1': res,
+                                        'elicitacao.analise2': res2
+                                    },
+                                    success: function (data) {
+                                        var nxt = $(el).next('.elicitacao');
+                                        if (nxt) {
+                                            if (nxt.attr('ref')) {
+                                                analisarElicitacao(nxt);
+                                            }
+                                            else {
+                                                if (list.page < list.numOfPages) {
+                                                    list.nextPage();
+                                                }
+                                                else {
+                                                    showModal("<i class=\"fa fa-thumbs-o-up\"></i> <br /> Análise finalizada.");
+                                                    analisando = false;
+                                                }
+                                            }
+                                        }
+                                        else {
+                                            showModal("<i class=\"fa fa-thumbs-o-up\"></i> <br /> Análise finalizada.");
+                                            analisando = false;
+                                        }
+                                    },
+                                    error: function () {
+                                        showModal("<i class=\"fa fa-warning\"></i> <br /> Houve um erro ao salvar os resultados da análise.");
+                                        cancelarAnalise();
+                                    }
+                                });
+                            }(el);
+                        });
+                    }(el);
+                });
+            }
+        }
     </script>
 </tmpl:script>
 
 <fmt:message bundle="${lang}" key="title" var="title" />
-<tmpl:dashboard title="${title} - ${instituicao.nome}">
+<tmpl:dashboard title="${title} - ${instituicao.nome}" open="true">
     <div class="centro">
         <div class="centro-container">
             <h1>Elicitações</h1>

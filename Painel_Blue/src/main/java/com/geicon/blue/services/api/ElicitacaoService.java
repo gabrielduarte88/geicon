@@ -63,4 +63,6 @@ public interface ElicitacaoService extends Service<Elicitacao> {
      * @return Score obtido
      */
     public Float calcularScore2(Elicitacao elicitacao);
+
+    public void alterarElicitacao(Elicitacao elicitacao);
 }

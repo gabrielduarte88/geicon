@@ -294,6 +294,45 @@ public class ElicitacoesController implements Serializable {
         result.use(json()).from(msg, "msg").include("extra").serialize();
     }
 
+    @Post("/elicitacoes/{elicitacao.code}/analise")
+    public void analise(Elicitacao elicitacao) {
+        Message msg;
+
+        Transaction tx = null;
+
+        try {
+            if (elicitacao.getId() != null) {
+                Elicitacao elicitacaoAt = elicitacaoService.buscarElicitacaoPorId(elicitacao.getId());
+
+                elicitacaoAt.setAnalise1(elicitacao.getAnalise1());
+                elicitacaoAt.setAnalise2(elicitacao.getAnalise2());
+
+                tx = elicitacaoService.getDao().getSession().beginTransaction();
+
+                elicitacaoService.alterarElicitacao(elicitacaoAt);
+
+                tx.commit();
+
+                logService.log((Instituicao) result.included().get("instituicao"), "Elicitação #%d alterada", elicitacaoAt.getId());
+
+                msg = new SuccessMessage("Elicitação alterada com sucesso!");
+            }
+            else {
+                msg = new ErrorMessage("Os dados necessários não foram enviados");
+            }
+        }
+        catch (Exception ex) {
+            msg = new ExceptionMessage("Houve um erro e a alteração não pode ser realizada. Por favor, tente novamente em breve.");
+            logger.error("Erro na tentativa de alteração de elicitação", ex);
+
+            if (tx != null) {
+                tx.rollback();
+            }
+        }
+
+        result.use(json()).from(msg, "msg").include("extra").serialize();
+    }
+
     /**
      * Visualizar grafo elicitação
      *

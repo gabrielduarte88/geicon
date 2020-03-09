@@ -426,4 +426,9 @@ public class ElicitacaoServiceImpl extends GenericService<Elicitacao> implements
 
         return 0;
     }
+
+    @Override
+    public void alterarElicitacao(Elicitacao elicitacao) {
+        update(elicitacao);
+    }
 }

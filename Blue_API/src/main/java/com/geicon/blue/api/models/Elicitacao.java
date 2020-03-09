@@ -53,6 +53,12 @@ public class Elicitacao extends GenericEntity {
      */
     @Column(name = "score2")
     private Float score2;
+
+    @Column(name = "analise1")
+    private String analise1;
+
+    @Column(name = "analise2")
+    private String analise2;
     /**
      * Última alteração
      */
@@ -176,6 +182,22 @@ public class Elicitacao extends GenericEntity {
      */
     public void setScore2(Float score2) {
         this.score2 = score2;
+    }
+
+    public String getAnalise1() {
+        return analise1;
+    }
+
+    public void setAnalise1(String analise1) {
+        this.analise1 = analise1;
+    }
+
+    public String getAnalise2() {
+        return analise2;
+    }
+
+    public void setAnalise2(String analise2) {
+        this.analise2 = analise2;
     }
 
     /**

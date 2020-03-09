@@ -10,6 +10,7 @@
 <fmt:setBundle basename="messages" var="lang" />
 
 <tmpl:script>
+    <script src="${contextPath}/res/js/blue/analise.js" type="text/javascript"></script>
     <script>
         list.numOfPages = ${(total / itensPorPagina) - 1};
         
@@ -17,6 +18,25 @@
             if ($('#valorFiltro').val() != '') {
                 $('#indicadorFiltro').html("Buscando em '" + $('#campoFiltro option:selected').text() + "' por '" + $('#valorFiltro').val() + "'. ");
             }
+            
+            $('#btnAnalisar').click(function () {
+                var $buttons = $('<div>').addClass('buttons');
+                $buttons.append($('<button>').attr('type', 'button').addClass('btn').addClass('btn-default').html('Cancelar')
+                        .click(function () {
+                            $.unblockUI();
+                        }));
+                $buttons.append($('<button>').attr('type', 'button').addClass('btn').addClass('btn-info').html('Analisar')
+                        .click(function () {
+                            $.unblockUI();
+                            iniciarAnalise();
+                        }));
+
+                showModal("Deseja realmente iniciar a análise? O processo pode demorar alguns minutos.", $buttons);
+            });
+            
+            $('#btnCancelarAnalise').click(function () {
+                cancelarAnalise();
+            });
         });
     </script>
 </tmpl:script>
@@ -26,6 +46,8 @@
         <div class="acoes">
             <div class="botoes">
                 <button class="btn" id="btnNovo"><i class="fa fa-plus-circle"></i> nova elicitação</button>
+                <button class="btn" id="btnAnalisar" style="background-color: #090;"><i class="fa fa-eye"></i> analisar elicitações</button>
+                <button class="btn" id="btnCancelarAnalise" style="background-color: #900; display: none;"><i class="fa fa-times"></i> cancelar analise</button>
             </div>
             <div class="filtro">
                 <span>Buscar em</span>
@@ -76,6 +98,18 @@
                         </a>
                     </th>
                     <th>
+                        Cont. Cc
+                        <a href="#" class="ordem" ref="analise1" title="Ordenar" data-toggle="tooltip">
+                            <tmpl:sort-icon field="score" sortField="${campoOrdem}" order="${ordem}" />
+                        </a>
+                    </th>
+                    <th>
+                        Func. Psico
+                        <a href="#" class="ordem" ref="analise2" title="Ordenar" data-toggle="tooltip">
+                            <tmpl:sort-icon field="analise2" sortField="${campoOrdem}" order="${ordem}" />
+                        </a>
+                    </th>
+                    <th>
                         Data
                         <a href="#" class="ordem" ref="data" title="Ordenar" data-toggle="tooltip">
                             <tmpl:sort-icon field="data" sortField="${campoOrdem}" order="${ordem}" />
@@ -86,7 +120,7 @@
             </thead>
             <tbody>
                 <c:forEach var="elicitacao" items="${elicitacoes}">
-                    <tr>
+                    <tr class="elicitacao" ref="${elicitacao.code}">
                         <th scope="row">
                             <a href="#" class="visualizar" ref="${elicitacao.code}"><fmt:formatNumber pattern="000000" value="${elicitacao.id}" /></a>
                         </th>
@@ -94,6 +128,8 @@
                         <td>${elicitacao.agente.nome}</td>
                         <td>${elicitacao.score}</td>
                         <td>${elicitacao.score2}</td>
+                        <td class="analise1">${elicitacao.analise1}</td>
+                        <td class="analise2">${elicitacao.analise2}</td>
                         <td class="text-center"><fmt:formatDate type="both" timeStyle="short" value="${elicitacao.data}" /></td>
                         <td class="text-center button-container">
                             <div class="dropdown">

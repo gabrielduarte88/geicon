@@ -46,7 +46,6 @@ com/geicon/blue/api/dao/api/ObjetoDao.class
 com/geicon/blue/api/dao/api/BaseConhecimentoDao.class
 com/geicon/blue/api/dao/impl/ObjetoOcorrenciaDaoImpl.class
 com/geicon/blue/api/models/EnvioEmail.class
-.netbeans_automatic_build
 com/geicon/blue/api/models/enums/RelacaoPeso.class
 com/geicon/blue/api/models/ObjetoOcorrencia.class
 com/geicon/blue/api/dao/impl/AcaoDaoImpl.class
